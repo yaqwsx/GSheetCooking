@@ -1,0 +1,9 @@
+README.md
+setup.py
+isCooking.egg-info/PKG-INFO
+isCooking.egg-info/SOURCES.txt
+isCooking.egg-info/dependency_links.txt
+isCooking.egg-info/entry_points.txt
+isCooking.egg-info/not-zip-safe
+isCooking.egg-info/requires.txt
+isCooking.egg-info/top_level.txt
