@@ -100,7 +100,7 @@ def fillShoppingTable(sheet, groups):
                 format={'backgroundColor':{'red': 182 / 255, 'green': 215/ 255, 'blue': 168 / 255}} )
             sheet.set_data_validation(
                 Address((rowIdx, 1)).label,
-                Address((rowIdx, 4)).label,
+                Address((rowIdx, 1)).label,
                 condition_type="BOOLEAN"
             )
 
