@@ -1,2 +1,0 @@
-[console_scripts]
-iscooking = iscooking.ui:cli

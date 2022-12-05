@@ -1,2 +1,0 @@
-pygsheets==2.0.5
-click>=7.1
