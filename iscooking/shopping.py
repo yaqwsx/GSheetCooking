@@ -93,11 +93,16 @@ def fillShoppingTable(sheet, groups):
             amounts.apply_format(amountsTemplate)
 
             sheet.add_conditional_formatting(
-            Address((rowIdx, 1)).label,
-            Address((rowIdx, 4)).label,
-            condition_type="CUSTOM_FORMULA",
-            condition_values=[f'=NOT(ISBLANK($A${rowIdx}))'],
-            format={'backgroundColor':{'red': 182 / 255, 'green': 215/ 255, 'blue': 168 / 255}} )
+                Address((rowIdx, 1)).label,
+                Address((rowIdx, 4)).label,
+                condition_type="CUSTOM_FORMULA",
+                condition_values=[f'=$A${rowIdx}'],
+                format={'backgroundColor':{'red': 182 / 255, 'green': 215/ 255, 'blue': 168 / 255}} )
+            sheet.set_data_validation(
+                Address((rowIdx, 1)).label,
+                Address((rowIdx, 4)).label,
+                condition_type="BOOLEAN"
+            )
 
     sheet.spreadsheet.client.run_batch()
     sheet.spreadsheet.client.set_batch_mode(False)
